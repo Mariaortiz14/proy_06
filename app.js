@@ -18,7 +18,16 @@ const main = async() =>{
     functions.interfazbuscarBebida (bebida);
 
     const transporte = "avion"
-    functions.medioDeTransporte (transporte); 
+    functions.interfazmedioDeTransporte (transporte); 
+/*
+    const cantidad =2;
+    const precio = 20;
+    const descuento = 15;
+    functions.interfazcalcularPrecioVenta (cantidad, precio, descuento);
+
+  */
+    
+    
 }
 
 main();

@@ -1,3 +1,6 @@
+/* este codigo fue creado para crear una serie de funciones para determinar si ciertos numeros, productos o medios
+de transporte se encuentran en el sistema
+*/
 const functions = {};
 const signo = (numero) => {
     if (numero <= 0) {
@@ -62,7 +65,7 @@ const interfazbuscarBebida = (bebida) => {
 const medioDeTransporte = (transporte) => {
     const datos =["avion", "flota", "carro", "bicicleta"];
    if (transporte === "avion" || transporte === "flota") {
-        return "recuerda tener dinero para el pasaje";
+        return "recuerda tener dinero    ";
    } else if (transporte === "carro" || transporte === "bicicleta") {
     return " recuerda llevar ropa apropiada";
    } else {
@@ -74,15 +77,31 @@ const medioDeTransporte = (transporte) => {
 const interfazmedioDeTransporte = (transporte) => {
     //console.clear();
     console.log('**********************************************'.blue);
-    console.log('*      FUNCION MEDIO DE TRANSPORTE           *'.blue);
-    console.log('***************************************** ****'.blue);
-    console.log('*'.blue+ `      el transporte ${transporte} es     ` +     
-                functions.medioDeTransporte (transporte) +       '*'.blue);
-    console.log('**************************************************'.blue);
+    console.log('*       FUNCION ENCONTRAR TRANSPORTE           *'.blue);
+    console.log('**********************************************'.blue);
+;
+    console.log('*'.blue+ ` el transporte ${transporte} se encontro ` +     
+                functions.medioDeTransporte (transporte) +          '*'.blue);
+    console.log('************************************************************'.blue);
 };
 
+
+const interfazcalcularPrecioVenta = (cantidad, precio, descuento) => {
+    //console.clear();
+    console.log(calcularPrecioVenta(cantidad, precio, descuento));
+    console.log('************************************************************'.blue);
+    console.log('*               FUNCION FACTURA DE PRODUCTO                *'.blue);
+    console.log('************************************************************'.blue);
+    console.log('*   '.blue, (`producto:${cantidad}`)                      `*`.blue);
+    console.log('*   '.blue, (`producto:${precio}`)                      `*`.blue);
+    console.log('*   '.blue, (`producto:${descuento}`)                      `*`.blue);
+    console.log('************************************************************'.blue);
+  
+
+};
 const calcularPrecioVenta = (cantidad, precio, descuento) => {
-    if (typeof precio !== `number` ||
+    if (
+        typeof precio !== `number` ||
         typeof descuento !== `number` ||
         typeof cantidad !== `number` ||
         precio < 0 ||
@@ -98,10 +117,6 @@ const calcularPrecioVenta = (cantidad, precio, descuento) => {
         
     }
 };
-const interfazcalcularPrecioVenta = (cantidad, precio, descuento) => {
-    //console.clear();
-    console.log(calcularPrecioVenta(cantidad, precio, descuento));
-}
 
 
 
@@ -115,5 +130,6 @@ functions.medioDeTransporte = medioDeTransporte;
 functions.interfazmedioDeTransporte = interfazmedioDeTransporte;
 functions.calcularPrecioVenta = calcularPrecioVenta;
 functions.interfazcalcularPrecioVenta = interfazcalcularPrecioVenta;
+
 
 module.exports = functions;
